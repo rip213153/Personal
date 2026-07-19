@@ -39,7 +39,7 @@ export default function Home() {
             <span className="outline-word">USEFUL</span>
             <span>THINGS.</span>
           </h1>
-          <p className="hero-intro">我是 <strong>张杰</strong>，一名关注 Agent Harness、Multi-Agent 协作与后端系统的开发者。我希望让不确定的智能拥有可检查、可恢复、也能可靠停止的工程边界。</p>
+          <p className="hero-intro">我是 <strong>张杰</strong>，一名关注 Agent Harness、Multi-Agent 协作与后端系统的开发者。</p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/resume">查看我的简历 <Arrow /></Link>
             <Link className="text-link" href="/blog">读我的文章 <Arrow /></Link>

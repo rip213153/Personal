@@ -120,30 +120,37 @@ footer { position: relative; background: var(--pink); border-top: 3px solid var(
 .resume-hero, .blog-hero { padding-block: 100px; border-bottom: 2px solid var(--ink); }
 .resume-hero h1, .blog-hero h1 { font: 900 clamp(64px, 7.5vw, 112px)/.84 var(--font-display); margin: 35px 0; }
 .resume-hero h1 span, .blog-hero h1 span { color: var(--pink); }
-.resume-hero > p:last-child { max-width: 680px; font-size: 18px; line-height: 1.8; }
+.resume-hero > p:not(.kicker) { max-width: 760px; font-size: 18px; line-height: 1.8; }
+.resume-hero > p:not(.kicker), .experience-list p, .education-card p, .capability-list p, .resume-project-title p, .resume-projects li { font-family: "Noto Sans SC", "Microsoft YaHei UI", "PingFang SC", sans-serif; letter-spacing: .012em; }
 .resume-contact { display: flex; flex-wrap: wrap; gap: 16px 28px; margin-top: 32px; font: 700 12px var(--font-mono); }
 .resume-contact a { border-bottom: 2px solid var(--ink); padding-bottom: 5px; }
 .resume-grid { display: grid; grid-template-columns: 220px 1fr; gap: 0 70px; padding-block: 90px 130px; }
 .resume-grid aside { border-top: 3px solid var(--ink); padding-top: 18px; }
 .resume-grid aside h2 { font: 900 48px var(--font-display); margin: 0; }.resume-grid aside p { font: 11px var(--font-mono); }
+.experience-list { margin-bottom: 90px; }
+.experience-list article { display: grid; grid-template-columns: 150px 1fr; gap: 25px; padding-bottom: 45px; border-bottom: 2px solid var(--ink); }
+.experience-list time { font: 700 11px var(--font-mono); letter-spacing: .06em; }
+.experience-list h3 { font: 900 42px/.95 var(--font-display); margin: 0 0 10px; }
+.experience-list p { margin: 0; font-size: 15px; line-height: 1.8; color: #343640; }
+.experience-list .experience-company { margin-bottom: 5px; font-weight: 800; color: var(--ink); }
 .education-card { margin-bottom: 90px; padding: 32px; border: 3px solid var(--ink); background: var(--yellow); box-shadow: 9px 9px 0 var(--ink); }
 .education-card time, .resume-projects time { font: 700 11px var(--font-mono); letter-spacing: .06em; }
 .education-card h3 { font: 900 48px/.95 var(--font-display); margin: 26px 0 12px; }
-.education-card p { margin: 0; font-weight: 700; }
+.education-card p { margin: 0; font-size: 15px; line-height: 1.7; font-weight: 700; }
 .capability-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 90px; }
 .capability-list article { padding: 24px; border: 2px solid var(--ink); background: var(--white); box-shadow: 5px 5px 0 var(--ink); }
 .capability-list article:nth-child(2) { background: var(--blue); }
 .capability-list article:nth-child(3) { background: var(--mint); }
 .capability-list h3 { font: 900 29px/.95 var(--font-display); margin: 0 0 18px; }
-.capability-list p { margin: 0; line-height: 1.75; font-size: 14px; }
+.capability-list p { margin: 0; line-height: 1.85; font-size: 14px; color: #343640; }
 .resume-projects { display: grid; gap: 60px; }
 .resume-projects > article { display: grid; grid-template-columns: 125px 1fr; gap: 25px; padding-bottom: 55px; border-bottom: 2px solid var(--ink); }
 .resume-project-title { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
 .resume-project-title h3 { font: 900 clamp(42px, 5vw, 72px)/.9 var(--font-display); margin: 0 0 12px; }
-.resume-project-title p { margin: 0; max-width: 620px; font-weight: 700; line-height: 1.55; }
+.resume-project-title p { margin: 0; max-width: 620px; font-weight: 700; line-height: 1.65; font-size: 15px; color: #343640; }
 .resume-project-title a { flex: 0 0 auto; background: var(--pink); border: 2px solid var(--ink); padding: 10px 14px; box-shadow: 4px 4px 0 var(--ink); font-weight: 900; }
 .resume-projects ul { padding-left: 20px; margin: 30px 0 0; }
-.resume-projects li { padding-left: 6px; margin-bottom: 13px; line-height: 1.75; }
+.resume-projects li { padding-left: 6px; margin-bottom: 13px; line-height: 1.85; font-size: 15px; color: #343640; }
 .blog-page { background-image: radial-gradient(var(--ink) .8px, transparent .8px); background-size: 18px 18px; }
 .blog-hero { background: var(--paper); }.article-index { padding-block: 80px 130px; }.article-index article { display: grid; grid-template-columns: 120px 1fr; padding: 48px 0; border-bottom: 3px solid var(--ink); background: var(--paper); }.article-number { font: 900 70px var(--font-display); color: var(--pink); -webkit-text-stroke: 1px var(--ink); }.article-meta { display: flex; gap: 20px; font: 11px var(--font-mono); }.article-meta span { background: var(--yellow); padding: 3px 8px; }.article-index h2 { font: 900 clamp(36px, 5vw, 66px)/.95 var(--font-display); margin: 24px 0 14px; }.article-index p { max-width: 620px; line-height: 1.7; }.article-index a { display: inline-block; margin-top: 20px; font-weight: 900; border-bottom: 2px solid var(--ink); }
 
@@ -187,7 +194,7 @@ footer { position: relative; background: var(--pink); border-top: 3px solid var(
   .about-grid { grid-template-columns: 1fr; padding-block: 80px; gap: 35px; }.about-mark { display: none; }
   .writing-section { grid-template-columns: 1fr; padding-block: 90px; }.writing-title { grid-row: auto; }.post-row { grid-template-columns: 1fr auto; padding-block: 24px; }.post-row time { grid-column: 1; }.post-row h3 { grid-column: 1; margin: 0; }.post-tag { grid-column: 2; grid-row: 1; }.post-row > span:last-child { grid-column: 2; grid-row: 2; }
   .footer-content > a { font-size: clamp(44px, 12vw, 74px); }.footer-bottom { flex-direction: column; gap: 8px; }
-  .resume-grid { grid-template-columns: 1fr; }.resume-grid aside { margin-bottom: 36px; }.education-card, .capability-list { margin-bottom: 70px; }.capability-list { grid-template-columns: 1fr; }.resume-projects > article { grid-template-columns: 1fr; }
+  .resume-grid { grid-template-columns: 1fr; }.resume-grid aside { margin-bottom: 36px; }.experience-list, .education-card, .capability-list { margin-bottom: 70px; }.experience-list article { grid-template-columns: 1fr; gap: 16px; }.capability-list { grid-template-columns: 1fr; }.resume-projects > article { grid-template-columns: 1fr; }
   .post-layout { grid-template-columns: 1fr; }.post-toc { position: static; }.post-toc nav { grid-template-columns: repeat(2, 1fr); }
 }
 
